@@ -18,6 +18,8 @@
         <?php include "include/footer.php" ?>
     </div>
     <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick-theme.css">
