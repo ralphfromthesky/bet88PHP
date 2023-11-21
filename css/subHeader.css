@@ -1,0 +1,53 @@
+.main-subHeader-container {
+    background-color: #1e222c;
+    color: #5b7cfe;
+    padding: 0 13%;
+
+}
+
+.slick-carousel-subHeader {
+    white-space: nowrap;
+}
+
+.subHeader-container {
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    color: rgb(144, 162, 220);
+}
+
+.subHeader-container i {
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.subHeader-container img {
+    position: absolute;
+    height: 30px;
+    top: 0;
+    right: 1vw;
+    transform-origin: 50% 0;
+    animation: wobble-hor-top 2s linear infinite;
+}
+
+.subHeader-container:hover {
+    background-color: #5C59FF;
+    color: white;
+    border-color: #fff;
+}
+
+.subHeader-container h4 {
+    font-size: 15px;
+}
+
+#hot {
+    animation: wobble-hor-top 3s infinite;
+}
+
+@keyframes wobble-hor-top {
+    0%{transform: rotate(-15deg); }
+    50% {transform: rotate(45deg);}
+    100%{transform: rotate(-15deg);}
+}
