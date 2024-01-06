@@ -4,92 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
     <style>
-        .loader {
-            width: 26em;
-            height: 26em;
-            font-size: 10px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .main {
+            height: 100vh;
             border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            position: relative;
+            height: 60px;
+            width: 60px;
         }
 
-        .loader .face {
+        .content::before {
+            content: "";
+            box-sizing: border-box;
             position: absolute;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
-            border-style: solid;
-            animation: animate023845 3s linear infinite;
+            border-top: 2px solid #8900FF;
+            border-right: 2px solid transparent;
+            animation: rotation 0.8s linear infinite;
         }
 
-        .loader .face:nth-child(3) {
-            width: 100%;
-            height: 100%;
-            color: gold;
-            border-color: currentColor transparent transparent currentColor;
-            border-width: 0.2em 0.2em 0em 0em;
-            --deg: -45deg;
-            animation-direction: normal;
-        }
-
-        .loader .face:nth-child(2) {
-            width: 90%;
-            height: 90%;
-            color: lime;
-            border-color: currentColor currentColor transparent transparent;
-            border-width: 0.2em 0em 0em 0.2em;
-            --deg: -135deg;
-            animation-direction: reverse;
-        }
-
-        .loader .face .circle {
+        .content::after {
+            content: "";
+            box-sizing: border-box;
             position: absolute;
-            width: 50%;
-            height: 0.1em;
-            top: 50%;
-            left: 50%;
-            background-color: transparent;
-            transform: rotate(var(--deg));
-            transform-origin: left;
-        }
-
-        .loader .face .circle::before {
-            position: absolute;
-            top: -0.5em;
-            right: -0.5em;
-            content: '';
-            width: 10px;
-            height: 10px;
-            background-color: currentColor;
+            width: 140px;
+            height: 140px;
+            top: 10px;
+            right: 10px;
             border-radius: 50%;
-            box-shadow: 0 0 2em,
-                0 0 4em,
-                0 0 6em,
-                0 0 8em,
-                0 0 10em,
-                0 0 0 0.5em rgba(255, 255, 0, 0.1);
+            border-top: 2px solid red;
+            border-right: 2px solid transparent;
+            animation: rotation .9s linear infinite reverse;
         }
 
-        @keyframes animate023845 {
-            to {
+        @keyframes rotation {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
                 transform: rotate(360deg);
             }
         }
+        
     </style>
 </head>
 
 <body>
-    <div class="loader">
-        <img src="/images/logo65.png" alt="">
-
-        <div class="face">
-            <div class="circle">
-            </div>
-        </div>
-        <div class="face">
-            <div class="circle"></div>
+    <div class="main">
+        <div class="content">
         </div>
     </div>
 </body>

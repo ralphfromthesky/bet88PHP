@@ -3,9 +3,12 @@
         <img src="images/logo1.png" alt="">
     </div>
     <div class="footer-paragraph">
-        <p>Đánh bạc có thể gây nghiện, hãy chơi một cách có trách nhiệm. Để biết thông tin về các biện pháp hỗ trợ, vui lòng truy cập trang trợ giúp của chúng tôi.
+        <p>Đánh bạc có thể gây nghiện, hãy chơi một cách có trách nhiệm. Để biết thông tin về các biện pháp hỗ trợ, vui
+            lòng truy cập trang trợ giúp của chúng tôi.
             <br> <br>
-            Chúng tôi có giấy phép hợp pháp từ UK GC (Gambling Commission), (MGA) và (PAGCOR) của Chính phủ Philippines. Công ty được đăng ký tại Quần đảo Virgin thuộc Anh, được công nhận bởi các tổ chức quốc tế. Hãy đảm bảo bạn đã đủ 18 tuổi trở lên trước khi đăng ký chơi game!
+            Chúng tôi có giấy phép hợp pháp từ UK GC (Gambling Commission), (MGA) và (PAGCOR) của Chính phủ Philippines.
+            Công ty được đăng ký tại Quần đảo Virgin thuộc Anh, được công nhận bởi các tổ chức quốc tế. Hãy đảm bảo bạn
+            đã đủ 18 tuổi trở lên trước khi đăng ký chơi game!
         </p>
     </div>
     <div class="footer-logo">
@@ -21,3 +24,18 @@
         <h5>@ 2014 v1.61 EE88. Bảo lưu mọi quyền.</h5>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+
+        for (let i = 4; i <= 24; i++) {
+            const imgElement = $("<img>", {
+                src: `images/logo${i}.png`,
+                alt: `Logo ${i}`,
+            });
+            $(".container-footer").append(imgElement);
+        }
+
+        
+    });
+</script>
